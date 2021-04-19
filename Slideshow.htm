@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="image" src="https://kansaspublicradio.org/sites/kansaspublicradio.org/files/styles/responsive/adaptive-image/public/field/image/ku_jayhawk_3.jpg?itok=-6VaQUko" width="800" height="800">
+<p>
+<button type="button" onclick="changePic(0)">Previous</button>
+<button type="button" onclick="changePic(1)">Next</button>
+</p>
+
+
+<script>
+function changePic(next){
+	var nextIm;
+	if(next == 1){
+		if(document.getElementById("image").src === "https://kansaspublicradio.org/sites/kansaspublicradio.org/files/styles/responsive/adaptive-image/public/field/image/ku_jayhawk_3.jpg?itok=-6VaQUko"){
+			nextIm = "https://www.ksnt.com/wp-content/uploads/sites/86/2018/05/KU20Campus20Wide_1526578637343.jpg_42857698_ver1.0_640_360_1526661421217.jpg_42948042_ver1.0.jpg?w=640&h=360&crop=1"
+		}
+		else if(document.getElementById("image").src === "https://www.ksnt.com/wp-content/uploads/sites/86/2018/05/KU20Campus20Wide_1526578637343.jpg_42857698_ver1.0_640_360_1526661421217.jpg_42948042_ver1.0.jpg?w=640&h=360&crop=1"){
+			nextIm = "https://www.commonapp.org/static/1d6f061b03c62c1baeabe5d5c499e884/university-kansas_965.png";
+		}
+		else if(document.getElementById("image").src === "https://www.commonapp.org/static/1d6f061b03c62c1baeabe5d5c499e884/university-kansas_965.png"){
+			nextIm = "https://www.ksn.com/wp-content/uploads/sites/13/2020/08/ku-campus.jpeg?w=1280";
+		}
+		else if(document.getElementById("image").src === "https://www.ksn.com/wp-content/uploads/sites/13/2020/08/ku-campus.jpeg?w=1280"){
+			nextIm = "https://unmistakablylawrence.com/wp-content/uploads/2015/03/kuscenic-300x199.jpg";
+		}
+		else if(document.getElementById("image").src === "https://unmistakablylawrence.com/wp-content/uploads/2015/03/kuscenic-300x199.jpg"){
+			nextIm = "https://kansaspublicradio.org/sites/kansaspublicradio.org/files/styles/responsive/adaptive-image/public/field/image/ku_jayhawk_3.jpg?itok=-6VaQUko";
+		}
+	}
+	else if(next == 0){
+		if(document.getElementById("image").src === "https://kansaspublicradio.org/sites/kansaspublicradio.org/files/styles/responsive/adaptive-image/public/field/image/ku_jayhawk_3.jpg?itok=-6VaQUko"){
+			nextIm = "https://unmistakablylawrence.com/wp-content/uploads/2015/03/kuscenic-300x199.jpg";
+		}
+		else if(document.getElementById("image").src === "https://unmistakablylawrence.com/wp-content/uploads/2015/03/kuscenic-300x199.jpg"){
+			nextIm = "https://www.ksn.com/wp-content/uploads/sites/13/2020/08/ku-campus.jpeg?w=1280";
+		}
+		else if(document.getElementById("image").src === "https://www.ksn.com/wp-content/uploads/sites/13/2020/08/ku-campus.jpeg?w=1280"){
+			nextIm = "https://www.commonapp.org/static/1d6f061b03c62c1baeabe5d5c499e884/university-kansas_965.png";
+		}
+		else if(document.getElementById("image").src === "https://www.commonapp.org/static/1d6f061b03c62c1baeabe5d5c499e884/university-kansas_965.png"){
+			nextIm = "https://www.ksnt.com/wp-content/uploads/sites/86/2018/05/KU20Campus20Wide_1526578637343.jpg_42857698_ver1.0_640_360_1526661421217.jpg_42948042_ver1.0.jpg?w=640&h=360&crop=1";
+		}
+		else if(document.getElementById("image").src === "https://www.ksnt.com/wp-content/uploads/sites/86/2018/05/KU20Campus20Wide_1526578637343.jpg_42857698_ver1.0_640_360_1526661421217.jpg_42948042_ver1.0.jpg?w=640&h=360&crop=1"){
+			nextIm = "https://kansaspublicradio.org/sites/kansaspublicradio.org/files/styles/responsive/adaptive-image/public/field/image/ku_jayhawk_3.jpg?itok=-6VaQUko";
+		}
+	}
+	document.getElementById("image").src = nextIm;
+}
+
+</script>
+
+</body>
+</html>

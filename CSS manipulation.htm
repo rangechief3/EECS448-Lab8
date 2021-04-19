@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#paragraph{
+	border-style:solid;
+}
+
+</style>
+</head>
+<body>
+
+<div id="paragraph">
+<p id = "para">
+TEXT! Oh my good golly gosh look at all this text! I have no idea what to put here so im going to keep typing things!<br>
+It was really nice out today! I hope that its nice out this week. It was kind of cold last week. My favorite food is lasagna.<br>
+Are y'all actually reading the text we put here? If so, I apologize for making you read that.
+</p>
+</div>
+
+
+<h3>Border</h3>
+<form>
+
+<label for="redVal">Red Value(rgb):</label><br>
+<input type="text" id="redVal" id = "redVal" name="redVal"><br>
+
+<label for="blueVal">Blue Value(rgb):</label><br>
+<input type="text" id="blueVal" id = "blueVal" name="blueVal"><br>
+
+<label for="greenVal">Green Value(rgb):</label><br>
+<input type="text" id="greenVal" id = "greenVal" name="greenVal"><br>
+
+<label for="widthVal">Border Width:</label><br>
+<input type="text" id="widthVal" id = "widthVal" name="widthVal"><br>
+
+<h3>Background</h3>
+
+
+<label for="redVal2">Red Value(rgb):</label><br>
+<input type="text" id="redVal2" id = "redVal2" name="redVal2"><br>
+
+<label for="blueVal2">Blue Value(rgb):</label><br>
+<input type="text" id="blueVal2" id = "blueVal2" name="blueVal2"><br>
+
+<label for="greenVal2">Green Value(rgb):</label><br>
+<input type="text" id="greenVal2" id = "greenVal2" name="greenVal2"><br>
+<br>
+<button type="button" onclick="changeLook()">Enter</button>
+
+</form>
+
+
+<script>
+
+
+function changeLook(){
+	var borderRed = document.getElementById('redVal').value;
+	if(borderRed.length == 0){
+		borderRed = 0;
+	}
+	
+	var borderBlue = document.getElementById('blueVal').value;
+	if(borderBlue.length == 0){
+		borderBlue = 0;
+	}
+	
+	var borderGreen = document.getElementById('greenVal').value;
+	if(borderGreen.length == 0){
+		borderGreen = 0;
+	}
+
+	var borderWidth = document.getElementById('widthVal').value;
+	if(borderWidth.length == 0){
+		borderWidth = 0;
+	}
+
+	
+	var backRed = document.getElementById('redVal2').value;
+	if(backRed.length == 0){
+		backRed = 0;
+	}
+
+	var backBlue = document.getElementById('blueVal2').value;
+	if(backBlue.length == 0){
+		backBlue = 0;
+	}
+
+	var backGreen = document.getElementById('greenVal2').value;
+	if(backGreen.length == 0){
+		backGreen = 0;
+	}
+	
+	var backColor = "rgb(" + backRed + "," + backGreen + "," + backBlue + ")";
+	document.getElementById('para').style.backgroundColor = backColor;
+
+	var borderColor = "rgb(" + borderRed + "," + borderGreen + "," + borderBlue + ")";
+	document.getElementById('paragraph').style.borderColor = borderColor;
+	
+	var width = borderWidth + "px";
+	console.log(width);
+	document.getElementById('paragraph').style.borderWidth = width;
+
+}
+
+</script>
+
+
+</body>
+</html>
